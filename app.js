@@ -4,10 +4,26 @@ const binance = require('node-binance-api')().options({
     useServerTime: true, // If you get timestamp errors, synchronize to server time at startup
     test: true
 })
-var trad 
+var interval = 1 //seconds
+var t = 1
+var last_trade = [Date.now()]
 binance.websockets.trades(['MATICBTC'], (trades) => {
     var {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades
-    //console.log(symbol+" trade update. price: "+price+", quantity: "+quantity+", maker: "+maker)
-    trad = trades
-    console.log(trad)
+    
+    var time = Date.now()
+    if(time != eventTime){
+        last_trade.push(eventTime)
+        if(last_trade.length > 2){
+            last_trade.shift()
+        }
+    }
+    var delta_time = (last_trade[1] - last_trade[0])
+    
+    var obj = {price: price, qtd: (quantity/1), latency: delta_time/1000}
+    console.log(obj)
+    
 })
+// setInterval(() => {
+//     console.log(t)
+//     t++
+// }, interval*1000)
