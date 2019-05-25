@@ -1,7 +1,7 @@
 const binance = require('node-binance-api')().options({
     APIKEY: '<key>',
     APISECRET: '<secret>',
-    useServerTime: true, // If you get timestamp errors, synchronize to server time at startup
+    useServerTime: true, 
     test: true
 })
 var interval = 1 //seconds
