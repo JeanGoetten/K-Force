@@ -1,0 +1,19 @@
+{
+  "name": "tusd-usdt-infinity-profit-bot",
+  "version": "1.0.0",
+  "description": "make infinity money with tusd and usdt",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "itxtoledo",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "console-table": "^0.1.2",
+    "console-title": "^1.1.0",
+    "console.table": "^0.10.0",
+    "node-binance-api": "^0.9.1",
+    "table": "^5.4.0"
+  }
+}
