@@ -1,7 +1,0 @@
-{
-    "API_KEY": "<key>",
-    "SECRET_KEY": "<secret>",
-    "BUY_PRICE": 0.9985,
-    "SELL_PRICE": 1.0030,
-    "INITIAL_INVESTMENT": 313.5
-}
