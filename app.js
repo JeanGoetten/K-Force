@@ -7,7 +7,7 @@ const binance = require('node-binance-api')().options({
 var interval = 1 //seconds
 var t = 1
 var last_trade = [Date.now()]
-binance.websockets.trades(['MATICBTC'], (trades) => {
+binance.websockets.trades(['BTCUSDT'], (trades) => {
     var {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades
     
     var time = Date.now()
