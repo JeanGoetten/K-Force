@@ -1,6 +1,6 @@
 {
-    "API_KEY": "pCJ2JEl2cOu84juUkasRhYHRwPMi1I0jtdI8Oe9x1oUGQ87uLEEBNCd3wdMh0z2T",
-    "SECRET_KEY": "XUGXVwQ4fha2uNsC1eAFPKaNaBQuNmZidgDnqW1kzAIGwD1z8I3JXMuzszcvTWch",
+    "API_KEY": "<key>",
+    "SECRET_KEY": "<secret>",
     "BUY_PRICE": 0.9985,
     "SELL_PRICE": 1.0030,
     "INITIAL_INVESTMENT": 313.5
