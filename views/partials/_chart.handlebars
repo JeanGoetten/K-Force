@@ -1,0 +1,62 @@
+<div id="chart">
+        <script>
+            
+            //BINANCE API CONNECTION
+            var burl = "https://api.binance.com"
+            var query = "/api/v1/time"
+            var url = burl + query
+
+            var ourRequest = new XMLHttpRequest()
+
+            setInterval(()=>{
+                ourRequest.open("GET", url, true)
+                ourRequest.onload = function(){
+                console.log(ourRequest.responseText)
+            }
+            ourRequest.send()
+            }, 1000)
+
+            //PLOT
+            function getData(){
+                return Math.random()
+            }
+            function getData2(){
+                return Math.random()
+            }
+            function getData3(){
+                return Math.random()
+            }
+            Plotly.plot('chart',[{
+                y:[getData()],
+                type:'line',
+                name: '0'
+            }]);
+            Plotly.plot('chart',[{
+                y:[getData2()],
+                type:'line',
+                name: '1'
+            }]);
+            Plotly.plot('chart',[{
+                y:[getData3()],
+                type:'line',
+                name: '2'
+            }]);
+            
+            var cnt = 0;
+            setInterval(function(){
+                Plotly.extendTraces('chart',{ y:[[getData()]]}, [0]);
+                Plotly.extendTraces('chart',{ y:[[getData2()]]}, [1]);
+                Plotly.extendTraces('chart',{ y:[[getData3()]]}, [2]);
+                cnt++;
+
+                if(cnt > 20) {
+                    Plotly.relayout('chart',{
+                        xaxis: {
+                            range: [cnt-20,cnt]
+                        }
+                    });
+                }
+            },1000);
+
+        </script>
+        </div>
