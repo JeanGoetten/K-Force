@@ -106,6 +106,9 @@ var last_price = [1, 1]
                   console.log("\x1b[34m", "COMPRA USDT: ",  amount_sum_ask)
                   console.log("\x1b[31m", "VENDA  USDT: ",  amount_sum_bid) 
                   console.log("\x1b[33m", "DIFER  USDT: ",  (amount_sum_ask - amount_sum_bid) + "\n") 
+                  console.log("\x1b[32m", price + "\n")
+
+                  console.clear()
                 })
 
                 // var real_m_vol = quantity/delta_time
